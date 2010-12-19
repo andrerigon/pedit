@@ -49,6 +49,28 @@ describe "Pedit" do
     normalize( parent.to_xml ) .should be == expected
   end
   
+  it "should create new dependency" do
+     xml = "<project>
+                <dependencies>
+                </dependencies>
+                <build>
+                    <plugins>
+                    </plugins>
+                </build>
+            </project>"
+
+      expected_dep = normalize "<dependency>
+                      <artifactId>test1</artifactId>
+                      <groupId>test</groupId>
+                      <version>3.4</version>
+                  </dependency>"
+                  
+      pom = parseXML xml
+      dep = dependency pom, :groupId => 'test', :artifactId => 'test1', :version => 3.4
+      
+      normalize( dep.to_xml ).should be == expected_dep
+  end
+  
   def find_node(xml, selector)
     (  xml.css selector) [0]
   end
