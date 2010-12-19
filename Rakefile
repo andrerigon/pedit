@@ -15,14 +15,12 @@ Jeweler::Tasks.new do |gem|
   gem.name = "pedit"
   gem.homepage = "http://github.com/andrerigon/pedit"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Help to add configurations to a pom.xml without open the file and edit by hand"
   gem.email = "andre.rigon@gmail.com"
-  gem.authors = ["andrerigon"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.homepage = "http://github.com/andrerigon/pedit"
+  gem.authors = ["Andre Ribeiro Goncalves"]
+  gem.add_dependency "nokogiri"
+  gem.post_install_message = "Thank you for installing pedit. Please go to http://github.com/andrerigon/pedit for more information."
 end
 Jeweler::RubygemsDotOrgTasks.new
 
