@@ -5,12 +5,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{pedit}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andre Ribeiro Goncalves"]
   s.date = %q{2010-12-19}
+  s.default_executable = %q{pedit}
   s.email = %q{andre.rigon@gmail.com}
+  s.executables = ["pedit"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -23,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bin/pedit",
     "lib/pedit.rb",
     "pedit.gemspec",
     "test/helper.rb",
