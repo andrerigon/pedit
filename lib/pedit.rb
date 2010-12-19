@@ -45,7 +45,8 @@ def savePom( pom )
   file.close
 end
 
-savePom add_dependency( parse ARGV[0] )
-
+def execute( args )
+  savePom add_dependency( parse args[0] )
+end
 
  
