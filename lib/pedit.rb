@@ -1,7 +1,6 @@
 require 'nokogiri'
 
-def add_dependency( dep ) 
-  pom = pom_xml
+def add_dependency( dep, pom ) 
   dependencies = dependenciesFrom pom
   addNodes dependencies, dependency( pom , dep ) 
   pom
@@ -46,7 +45,8 @@ def savePom( pom )
 end
 
 def execute( args )
-  savePom add_dependency( parse args[0] )
+  dep = parse args[0]
+  savePom( add_dependency( dep, pom_xml ))
 end
 
  
