@@ -1,6 +1,13 @@
 = pedit
 
-Description goes here.
+Help to add configurations to a pom.xml without open the file and edit by hand.
+Currently only supports adding new dependecies to pom file.
+
+To add a dependency, run pedit <groupId>:<artifactId>:<version>
+
+For example, to add a dependency for mockito version 1.8.5, run:
+
+pedit org.mockito:mockito:1.8.5 
 
 == Contributing to pedit
  
